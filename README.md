@@ -24,7 +24,6 @@
 | **Network**    | Allows communication between containers    |
 
 
-
 # 2. Essential Docker Skills to Learn
 | Skill                   | Why it matters                                  |
 | ----------------------- | ----------------------------------------------- |
@@ -35,9 +34,7 @@
 | Docker networks         | For internal communication (e.g., `web` ↔ `db`) |
 
 
-
-📦 Common Docker Commands
-
+## 📦 Common Docker Commands
 | Command                          | What it does                            |
 | -------------------------------- | --------------------------------------- |
 | `docker build .`                 | Builds a Docker image from a Dockerfile |
@@ -55,7 +52,7 @@ A basic Django project
 Dockerfile
 docker-compose.yml (optional, for DB later)
 
-📁 Folder Structure (after setup)
+## 📁 Folder Structure (after setup)
 
 my-django-app/
 ├── Dockerfile
@@ -68,7 +65,7 @@ my-django-app/
 │   └── wsgi.py
 
 
-✅ Step-by-Step Guide
+## ✅ Step-by-Step Guide
 🔹 1. Create Django Project Locally (optional)
 Skip if you already have a Django project.
 
