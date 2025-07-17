@@ -48,7 +48,7 @@ CMD ["python", "app.py"]
 
 6️⃣ docker-compose
 📦 Orchestrate multi-container apps
-- docker-compose.yml file defines multiple services (web, db, etc.).
+- `docker-compose.yml` file defines multiple services (web, db, etc.).
 - Runs everything together with one command.
 - ✅ Command: `docker-compose up -d`
 
