@@ -8,7 +8,7 @@
 - Fast Deployment:- Easily test and deploy apps.
 - Consistency:- “It works on my machine” problem is solved
 
-
+# Dockerfile → Image → Container → Volume/Network → Docker Compose
 1️⃣ Dockerfile
 🛠️ Define your app and environment
 - **A Dockerfile** contains instructions to build a custom Docker image (base image, copy files, install dependencies, etc.).
@@ -18,7 +18,39 @@ FROM python:3.10
 COPY . .
 RUN pip install -r requirements.txt
 CMD ["python", "app.py"]
-- ✅ Command: docker build -t myapp .
+- ✅ Command: `docker build -t myapp .`
+
+
+2️⃣ Images
+🧱 Blueprint of your app
+- Docker builds an image from a Dockerfile (or pulls from Docker Hub).
+- Contains the app code + OS + dependencies.
+- ✅ Command: `docker images or docker pull nginx`
+
+3️⃣ Containers
+🚢 Running instance of an image
+- A container is created from an image and actually runs the app.
+- Stateless by default, isolated, and disposable.
+- ✅ Command: `docker run -d -p 80:80 myapp`
+
+4️⃣ Volumes
+📁 Persistent storage for containers
+- Data in containers is lost when they’re deleted — volumes solve that.
+- Useful for databases, logs, etc.
+- ✅ Command: `docker run -v mydata:/app/data myapp`
+
+5️⃣ Networks
+🌐 Communication between containers
+- Needed when running multi-container apps (like web + database).
+- You can create custom networks to isolate or group services.
+- ✅ Command: `docker network create my_network`
+
+
+6️⃣ docker-compose
+📦 Orchestrate multi-container apps
+- docker-compose.yml file defines multiple services (web, db, etc.).
+- Runs everything together with one command.
+- ✅ Command: `docker-compose up -d`
 
 
 
