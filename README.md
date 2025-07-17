@@ -1,20 +1,20 @@
 # Docker and Commands
-Docker - Docker is a platform used to develop, ship, and run applications inside lightweight, portable, and isolated environments called containers.
+**Docker -** Docker is a platform used to develop, ship, and run applications inside lightweight, portable, and isolated environments called containers.
 
-🧠 Why Docker ?
+## 🧠 Why Docker ?
 ✅ Lightweight: No need for full virtual machines. Uses less memory.
 ✅ Portable:- Runs the same way on any machine (local, server, cloud).
 ✅ Isolated:- Each container is separate. No conflicts.
 ✅ Fast Deployment:- Easily test and deploy apps.
 ✅ Consistency:- “It works on my machine” problem is solved
 
-🧱 What is a Container ?
+## 🧱 What is a Container ?
 - A container is like a mini virtual machine that holds:
 - Your application
 - All dependencies
 - Configuration files
 
-✅ 1. Core Docker Concepts
+# 1. Core Docker Concepts
 | Concept        | Description                                |
 | -------------- | ------------------------------------------ |
 | **Image**      | A snapshot of your app and its environment |
@@ -25,8 +25,7 @@ Docker - Docker is a platform used to develop, ship, and run applications inside
 
 
 
-✅ 4. Essential Docker Skills to Learn
-
+# 2. Essential Docker Skills to Learn
 | Skill                   | Why it matters                                  |
 | ----------------------- | ----------------------------------------------- |
 | Writing `Dockerfile`    | Define how your app runs                        |
