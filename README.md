@@ -8,6 +8,23 @@
 - Fast Deployment:- Easily test and deploy apps.
 - Consistency:- “It works on my machine” problem is solved
 
+
+1️⃣ Dockerfile
+🛠️ Define your app and environment
+A Dockerfile contains instructions to build a custom Docker image (base image, copy files, install dependencies, etc.).
+📄 Example:
+
+Dockerfile
+Copy
+Edit
+FROM python:3.10
+COPY . .
+RUN pip install -r requirements.txt
+CMD ["python", "app.py"]
+✅ Command: docker build -t myapp .
+
+
+
 ## 🚢 What is a Container ?
 - A container is like a mini virtual machine that holds:
 - Your application
@@ -44,11 +61,11 @@
 | `docker exec -it CONTAINER bash` | Enter into a running container          |
 
 # 🌐 Networking
-docker network ls                           # List networks
-docker network create my_network            # Create custom network
-docker network inspect my_network
-docker network rm my_network
-docker run --network=my_network <image>
+`docker network ls`                           # List networks
+`docker network create my_network`            # Create custom network
+`docker network inspect my_network`
+`docker network rm my_network`
+`docker run --network=my_network <image>`
 
 
 
