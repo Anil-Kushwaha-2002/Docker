@@ -1,4 +1,4 @@
-# Docker and Commands
+# 🐳Docker and Commands
 **Docker -** Docker is a platform used to develop, ship, and run applications inside lightweight, portable, and isolated environments called containers.
 
 ## 🧠 Why Docker ?
@@ -9,6 +9,14 @@
 - Consistency:- “It works on my machine” problem is solved
 
 # 📚 Dockerfile → Image → Container → Volume/Network → Docker Compose
+
+🛠️ Dockerfile → 🧱 Image → 🚢 Container
+         ↘        ↘
+        📁 Volume  🌐 Network
+                ↓
+           📦 docker-compose
+
+
 1️⃣ Dockerfile
 🛠️ Define your app and environment
 - **A Dockerfile** contains instructions to build a custom Docker image (base image, copy files, install dependencies, etc.).
