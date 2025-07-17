@@ -9,19 +9,12 @@ Docker - Docker is a platform used to develop, ship, and run applications inside
 ✅ Consistency:- “It works on my machine” problem is solved
 
 🧱 What is a Container ?
-A container is like a mini virtual machine that holds:
-Your application
-All dependencies
-Configuration files
+- A container is like a mini virtual machine that holds:
+- Your application
+- All dependencies
+- Configuration files
 
 ✅ 1. Core Docker Concepts
-Concept     	 Description
-Image:- A snapshot of your app and its environment
-Container:- A running instance of an image
-Dockerfile:- Instructions to build a Docker image
-Volume:- Persistent storage for containers
-Network:- Allows communication between containers
-
 | Concept        | Description                                |
 | -------------- | ------------------------------------------ |
 | **Image**      | A snapshot of your app and its environment |
