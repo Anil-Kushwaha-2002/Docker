@@ -11,17 +11,14 @@
 
 1️⃣ Dockerfile
 🛠️ Define your app and environment
-A Dockerfile contains instructions to build a custom Docker image (base image, copy files, install dependencies, etc.).
-📄 Example:
-
-Dockerfile
-Copy
-Edit
+- **A Dockerfile** contains instructions to build a custom Docker image (base image, copy files, install dependencies, etc.).
+- 📄 Example:
+- Dockerfile
 FROM python:3.10
 COPY . .
 RUN pip install -r requirements.txt
 CMD ["python", "app.py"]
-✅ Command: docker build -t myapp .
+- ✅ Command: docker build -t myapp .
 
 
 
