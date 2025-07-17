@@ -8,7 +8,7 @@
 - Fast Deployment:- Easily test and deploy apps.
 - Consistency:- “It works on my machine” problem is solved
 
-# Dockerfile → Image → Container → Volume/Network → Docker Compose
+# 📚 Dockerfile → Image → Container → Volume/Network → Docker Compose
 1️⃣ Dockerfile
 🛠️ Define your app and environment
 - **A Dockerfile** contains instructions to build a custom Docker image (base image, copy files, install dependencies, etc.).
@@ -60,7 +60,7 @@ CMD ["python", "app.py"]
 - All dependencies
 - Configuration files
 
-# 📘 Core Docker Concepts
+## 📘 Core Docker Concepts
 | Concept        | Description                                |
 | -------------- | ------------------------------------------ |
 | **Image**      | A snapshot of your app and its environment |
@@ -70,7 +70,7 @@ CMD ["python", "app.py"]
 | **Network**    | Allows communication between containers    |
 
 
-# 🔁 Essential Docker Skills to Learn
+## 🔁 Essential Docker Skills to Learn
 | Skill                   | Why it matters                                  |
 | ----------------------- | ----------------------------------------------- |
 | Writing `Dockerfile`    | Define how your app runs                        |
@@ -80,7 +80,7 @@ CMD ["python", "app.py"]
 | Docker networks         | For internal communication (e.g., `web` ↔ `db`) |
 
 
-# 📦 Common Docker Commands
+## 📦 Common Docker Commands
 | Command                          | What it does                            |
 | -------------------------------- | --------------------------------------- |
 | `docker build .`                 | Builds a Docker image from a Dockerfile |
@@ -89,7 +89,7 @@ CMD ["python", "app.py"]
 | `docker stop CONTAINER_ID`       | Stops a container                       |
 | `docker exec -it CONTAINER bash` | Enter into a running container          |
 
-# 🌐 Networking
+## 🌐 Networking
 `docker network ls`                           # List networks
 `docker network create my_network`            # Create custom network
 `docker network inspect my_network`
