@@ -1,8 +1,8 @@
-## Basic Commands
+## 📚Basic Commands
 
-docker pull <image_name>                           # Download an image from Docker Hub
-docker images                                      # List all images on the local system
-docker rmi <image_id_or_name>                      # Remove one or more images
+1. docker pull <image_name>                           # Download an image from Docker Hub
+2. docker images                                      # List all images on the local system
+3. docker rmi <image_id_or_name>                      # Remove one or more images
 docker run <image>                                 # Run a container from an image
 docker run -it <image> /bin/bash                   # Run container interactively with a terminal
 docker run -d <image>                              # Run container in detached mode (background)
@@ -15,7 +15,8 @@ docker rm <container_id_or_name>                   # Remove a container
 docker ps                                          # List running containers
 docker ps -a                                       # List all containers including stopped ones
 
-## Intermediate Commands
+
+## 🧱Intermediate Commands
 
 docker exec -it <container> <command>              # Run command inside a running container
 docker logs <container>                            # View container logs
@@ -33,7 +34,8 @@ docker network inspect my_network                  # Detailed info about a netwo
 docker network rm my_network                       # Remove a network
 docker run --network=my_network <image>            # Run container in a specific network
 
-## Advanced Commands
+
+## 📘Advanced Commands
 
 docker build -t myapp:v1 .                         # Build image from Dockerfile
 docker-compose up                                  # Start all services defined in docker-compose.yml
@@ -44,9 +46,27 @@ docker image prune                                 # Remove unused images
 docker volume prune                                # Remove unused volumes
 docker container prune                             # Remove stopped containers
 
-## Other Useful Commands
+
+## 🔧Other Useful Commands
 
 docker rename old_name new_name                    # Rename a container
 docker cp <container>:/path ./host_path            # Copy files from container to host
 docker tag <image_id> myrepo/myimage:tag           # Tag image with a name and tag
 docker push myrepo/myimage:tag                     # Push tagged image to Docker Hub
+
+
+
+## 🌐 Networking
+
+docker network ls                                  # List networks
+docker network create my_network                   # Create custom network
+docker network inspect my_network
+docker network rm my_network
+docker run --network=my_network <image>
+
+## 🚀Volume Commands
+
+docker volume ls	                                # List all Docker volumes
+docker volume inspect pg_data	                    # View where the volume is stored
+docker volume rm pg_data	                        # Delete volume (only if not in use)
+docker-compose down -v	                          # Stops and removes containers + volumes
