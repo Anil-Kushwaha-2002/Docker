@@ -90,11 +90,11 @@ CMD ["python", "app.py"]
 | `docker exec -it CONTAINER bash` | Enter into a running container          |
 
 ## 🌐 Networking
-`docker network ls`                           # List networks
-`docker network create my_network`            # Create custom network
-`docker network inspect my_network`
-`docker network rm my_network`
-`docker run --network=my_network <image>`
+- `docker network ls`                           # List networks
+- `docker network create my_network`            # Create custom network
+- `docker network inspect my_network`
+- `docker network rm my_network`
+- `docker run --network=my_network <image>`
 
 
 
