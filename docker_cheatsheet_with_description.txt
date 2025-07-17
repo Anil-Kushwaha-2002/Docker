@@ -1,0 +1,52 @@
+## Basic Commands
+
+docker pull <image_name>                           # Download an image from Docker Hub
+docker images                                      # List all images on the local system
+docker rmi <image_id_or_name>                      # Remove one or more images
+docker run <image>                                 # Run a container from an image
+docker run -it <image> /bin/bash                   # Run container interactively with a terminal
+docker run -d <image>                              # Run container in detached mode (background)
+docker run -p 8080:80 <image>                      # Map port 8080 on host to 80 in container
+docker run --name my_container <image>             # Run container with a custom name
+docker start <container_id_or_name>                # Start a stopped container
+docker stop <container_id_or_name>                 # Stop a running container
+docker restart <container_id_or_name>              # Restart a container
+docker rm <container_id_or_name>                   # Remove a container
+docker ps                                          # List running containers
+docker ps -a                                       # List all containers including stopped ones
+
+## Intermediate Commands
+
+docker exec -it <container> <command>              # Run command inside a running container
+docker logs <container>                            # View container logs
+docker inspect <container_or_image>                # Show detailed info about container/image
+docker top <container>                             # Display running processes in a container
+docker stats                                       # Show resource usage statistics
+docker volume create my_volume                     # Create a new named volume
+docker volume ls                                   # List all volumes
+docker volume inspect my_volume                    # Detailed info about a volume
+docker volume rm my_volume                         # Remove a named volume
+docker run -v my_volume:/app/data <image>          # Attach volume to container
+docker network ls                                  # List all Docker networks
+docker network create my_network                   # Create a new custom network
+docker network inspect my_network                  # Detailed info about a network
+docker network rm my_network                       # Remove a network
+docker run --network=my_network <image>            # Run container in a specific network
+
+## Advanced Commands
+
+docker build -t myapp:v1 .                         # Build image from Dockerfile
+docker-compose up                                  # Start all services defined in docker-compose.yml
+docker-compose up -d                               # Start services in background
+docker-compose down                                # Stop and remove services, networks, and volumes
+docker system prune -a                             # Remove unused data including images and containers
+docker image prune                                 # Remove unused images
+docker volume prune                                # Remove unused volumes
+docker container prune                             # Remove stopped containers
+
+## Other Useful Commands
+
+docker rename old_name new_name                    # Rename a container
+docker cp <container>:/path ./host_path            # Copy files from container to host
+docker tag <image_id> myrepo/myimage:tag           # Tag image with a name and tag
+docker push myrepo/myimage:tag                     # Push tagged image to Docker Hub
