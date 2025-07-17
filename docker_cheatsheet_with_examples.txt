@@ -1,0 +1,134 @@
+## Basic Commands
+
+docker pull <image_name>                           # Download an image from Docker Hub
+Example: docker pull nginx
+
+docker images                                      # List all images on the local system
+Example: docker images
+
+docker rmi <image_id_or_name>                      # Remove one or more images
+Example: docker rmi nginx
+
+docker run <image>                                 # Run a container from an image
+Example: docker run nginx
+
+docker run -it <image> /bin/bash                   # Run container interactively with a terminal
+Example: docker run -it ubuntu /bin/bash
+
+docker run -d <image>                              # Run container in detached mode (background)
+Example: docker run -d nginx
+
+docker run -p 8080:80 <image>                      # Map port 8080 on host to 80 in container
+Example: docker run -p 8080:80 nginx
+
+docker run --name my_container <image>             # Run container with a custom name
+Example: docker run --name web nginx
+
+docker start <container_id_or_name>                # Start a stopped container
+Example: docker start web
+
+docker stop <container_id_or_name>                 # Stop a running container
+Example: docker stop web
+
+docker restart <container_id_or_name>              # Restart a container
+Example: docker restart web
+
+docker rm <container_id_or_name>                   # Remove a container
+Example: docker rm web
+
+docker ps                                          # List running containers
+Example: docker ps
+
+docker ps -a                                       # List all containers including stopped ones
+Example: docker ps -a
+
+
+## Intermediate Commands
+
+docker exec -it <container> <command>              # Run command inside a running container
+Example: docker exec -it web bash
+
+docker logs <container>                            # View container logs
+Example: docker logs web
+
+docker inspect <container_or_image>                # Show detailed info about container/image
+Example: docker inspect web
+
+docker top <container>                             # Display running processes in a container
+Example: docker top web
+
+docker stats                                       # Show resource usage statistics
+Example: docker stats
+
+docker volume create my_volume                     # Create a new named volume
+Example: docker volume create data_volume
+
+docker volume ls                                   # List all volumes
+Example: docker volume ls
+
+docker volume inspect my_volume                    # Detailed info about a volume
+Example: docker volume inspect data_volume
+
+docker volume rm my_volume                         # Remove a named volume
+Example: docker volume rm data_volume
+
+docker run -v my_volume:/app/data <image>          # Attach volume to container
+Example: docker run -v data_volume:/app/data nginx
+
+docker network ls                                  # List all Docker networks
+Example: docker network ls
+
+docker network create my_network                   # Create a new custom network
+Example: docker network create my_bridge
+
+docker network inspect my_network                  # Detailed info about a network
+Example: docker network inspect my_bridge
+
+docker network rm my_network                       # Remove a network
+Example: docker network rm my_bridge
+
+docker run --network=my_network <image>            # Run container in a specific network
+Example: docker run --network=my_bridge nginx
+
+
+## Advanced Commands
+
+docker build -t myapp:v1 .                         # Build image from Dockerfile
+Example: docker build -t myapp:v1 .
+
+docker-compose up                                  # Start all services defined in docker-compose.yml
+Example: docker-compose up
+
+docker-compose up -d                               # Start services in background
+Example: docker-compose up -d
+
+docker-compose down                                # Stop and remove services, networks, and volumes
+Example: docker-compose down
+
+docker system prune -a                             # Remove unused data including images and containers
+Example: docker system prune -a
+
+docker image prune                                 # Remove unused images
+Example: docker image prune
+
+docker volume prune                                # Remove unused volumes
+Example: docker volume prune
+
+docker container prune                             # Remove stopped containers
+Example: docker container prune
+
+
+## Other Useful Commands
+
+docker rename old_name new_name                    # Rename a container
+Example: docker rename web webserver
+
+docker cp <container>:/path ./host_path            # Copy files from container to host
+Example: docker cp web:/var/log/nginx ./logs
+
+docker tag <image_id> myrepo/myimage:tag           # Tag image with a name and tag
+Example: docker tag myapp:v1 myrepo/myapp:v1
+
+docker push myrepo/myimage:tag                     # Push tagged image to Docker Hub
+Example: docker push myrepo/myapp:v1
+
