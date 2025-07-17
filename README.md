@@ -8,13 +8,13 @@
 - Fast Deployment:- Easily test and deploy apps.
 - Consistency:- “It works on my machine” problem is solved
 
-# 📚 Dockerfile → Image → Container → Volume/Network → Docker Compose
+# 🐳  🛠️ Dockerfile → 🧱 Image → 🚢 Container → 📁Volume/🌐Network → 📦 docker-compose
 
-🛠️ Dockerfile → 🧱 Image → 🚢 Container
-         ↘        ↘
-        📁 Volume  🌐 Network
-                ↓
-           📦 docker-compose
+- 🛠️ Dockerfile → 🧱 Image → 🚢 Container
+-       ↘        ↘
+-        📁 Volume  🌐 Network
+-                ↓
+-          📦 docker-compose
 
 
 1️⃣ Dockerfile
