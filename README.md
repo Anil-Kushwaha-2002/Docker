@@ -2,11 +2,11 @@
 **Docker -** Docker is a platform used to develop, ship, and run applications inside lightweight, portable, and isolated environments called containers.
 
 ## 🧠 Why Docker ?
--- Lightweight: No need for full virtual machines. Uses less memory.
--- ✅ Portable:- Runs the same way on any machine (local, server, cloud).
-- ✅ Isolated:- Each container is separate. No conflicts.
-- ✅ Fast Deployment:- Easily test and deploy apps.
-- ✅ Consistency:- “It works on my machine” problem is solved
+- Lightweight: No need for full virtual machines. Uses less memory.
+- Portable:- Runs the same way on any machine (local, server, cloud).
+- Isolated:- Each container is separate. No conflicts.
+- Fast Deployment:- Easily test and deploy apps.
+- Consistency:- “It works on my machine” problem is solved
 
 ## 🧱 What is a Container ?
 - A container is like a mini virtual machine that holds:
