@@ -68,30 +68,30 @@ my-django-app/
 # 🔹 1. Create Django Project Locally (optional)
 Skip if you already have a Django project.
 
-mkdir my-django-app && cd my-django-app
-python -m venv venv && source venv/bin/activate
-pip install django
-django-admin startproject myproject .
-pip freeze > requirements.txt
+- mkdir my-django-app && cd my-django-app
+- python -m venv venv && source venv/bin/activate
+- pip install django
+- django-admin startproject myproject.
+- pip freeze > requirements.txt
 
 # 🔹 2. Create Dockerfile
-# Use official Python base image
+## Use official Python base image
 FROM python:3.11
 
-# Set working directory
+## Set working directory
 WORKDIR /app
 
-# Copy requirements & install
+## Copy requirements & install
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy entire Django project
+## Copy entire Django project
 COPY . .
 
-# Expose port 8000
+## Expose port 8000
 EXPOSE 8000
 
-# Run Django dev server
+## Run Django dev server
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 
 # 🔹 3. Build the Docker Image
