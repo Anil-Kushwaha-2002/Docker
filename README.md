@@ -8,13 +8,13 @@
 - Fast Deployment:- Easily test and deploy apps.
 - Consistency:- “It works on my machine” problem is solved
 
-## 🧱 What is a Container ?
+## 🚢 What is a Container ?
 - A container is like a mini virtual machine that holds:
 - Your application
 - All dependencies
 - Configuration files
 
-# 1. Core Docker Concepts
+# 📘 Core Docker Concepts
 | Concept        | Description                                |
 | -------------- | ------------------------------------------ |
 | **Image**      | A snapshot of your app and its environment |
@@ -24,7 +24,7 @@
 | **Network**    | Allows communication between containers    |
 
 
-# 2. Essential Docker Skills to Learn
+# 🔁 Essential Docker Skills to Learn
 | Skill                   | Why it matters                                  |
 | ----------------------- | ----------------------------------------------- |
 | Writing `Dockerfile`    | Define how your app runs                        |
@@ -42,6 +42,14 @@
 | `docker ps`                      | Shows running containers                |
 | `docker stop CONTAINER_ID`       | Stops a container                       |
 | `docker exec -it CONTAINER bash` | Enter into a running container          |
+
+# 🌐 Networking
+docker network ls                           # List networks
+docker network create my_network            # Create custom network
+docker network inspect my_network
+docker network rm my_network
+docker run --network=my_network <image>
+
 
 
 
