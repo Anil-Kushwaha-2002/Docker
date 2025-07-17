@@ -2,11 +2,11 @@
 **Docker -** Docker is a platform used to develop, ship, and run applications inside lightweight, portable, and isolated environments called containers.
 
 ## 🧠 Why Docker ?
-✅ Lightweight: No need for full virtual machines. Uses less memory.
-✅ Portable:- Runs the same way on any machine (local, server, cloud).
-✅ Isolated:- Each container is separate. No conflicts.
-✅ Fast Deployment:- Easily test and deploy apps.
-✅ Consistency:- “It works on my machine” problem is solved
+-- Lightweight: No need for full virtual machines. Uses less memory.
+-- ✅ Portable:- Runs the same way on any machine (local, server, cloud).
+- ✅ Isolated:- Each container is separate. No conflicts.
+- ✅ Fast Deployment:- Easily test and deploy apps.
+- ✅ Consistency:- “It works on my machine” problem is solved
 
 ## 🧱 What is a Container ?
 - A container is like a mini virtual machine that holds:
@@ -65,7 +65,7 @@ my-django-app/
 
 
 # ✅ Step-by-Step Guide
-# 🔹 1. Create Django Project Locally (optional)
+# 1. Create Django Project Locally (optional)
 Skip if you already have a Django project.
 
 - mkdir my-django-app && cd my-django-app
@@ -74,7 +74,7 @@ Skip if you already have a Django project.
 - django-admin startproject myproject.
 - pip freeze > requirements.txt
 
-# 🔹 2. Create Dockerfile
+# 2. Create Dockerfile
 ## Use official Python base image
 `FROM python:3.11`
 
@@ -94,10 +94,10 @@ Skip if you already have a Django project.
 ## Run Django dev server
 `CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]`
 
-# 🔹 3. Build the Docker Image
+# 3. Build the Docker Image
 `docker build -t django-app .`
 
-# 🔹 4. Run the Django Container
+# 4. Run the Django Container
 `docker run -d -p 8000:8000 django-app`
 
 Open in browser: http://localhost:8000
