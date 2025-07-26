@@ -155,8 +155,8 @@ We’ll set up:
 - requirements.txt
 
 # ✅ Step-by-Step Guide
-same as simple python app
-Automatically builds the Dockerfile and runs the app
+- same as simple python app
+# Automatically builds the Dockerfile and runs the app
 `docker compose up --build`
 Open in browser: http://localhost:8000
 You should see the Django welcome page 🎉
