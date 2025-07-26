@@ -146,6 +146,7 @@ Skip if you already have a python project.
 Open in browser: http://localhost:8000
 You should see the Django welcome page 🎉
 
+```
 # 2. Project: Dockerize a Django App
 ## ✅ Best for: Multi-file Projects like Django, with volumes, ports, and services.
 We’ll set up:
@@ -158,8 +159,9 @@ We’ll set up:
 same as simple python app
 Automatically builds the Dockerfile and runs the app
 `docker compose up --build`
-
-
+Open in browser: http://localhost:8000
+You should see the Django welcome page 🎉
+```
 
 
 
