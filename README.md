@@ -128,6 +128,7 @@ Skip if you already have a python project.
 
 # 2. Create Dockerfile  
 ## `nano Dockerfile`  - #  Paste this code:-
+```
 - `FROM python:3.11`   # Use official Python base image
 - `WORKDIR /app`   # Set working directory
 - `COPY requirements.txt .`   # Copy requirements & install
@@ -135,6 +136,7 @@ Skip if you already have a python project.
 - `COPY . .`    # Copy entire project
 - `EXPOSE 8000`    # Expose port 8000
 - `CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]`   # Run python dev server
+```
 
 
 # 3. Build the Docker Image
@@ -146,7 +148,6 @@ Skip if you already have a python project.
 Open in browser: http://localhost:8000
 You should see the Django welcome page 🎉
 
-```
 # 2. Project: Dockerize a Django App
 ## ✅ Best for: Multi-file Projects like Django, with volumes, ports, and services.
 We’ll set up:
@@ -161,7 +162,7 @@ Automatically builds the Dockerfile and runs the app
 `docker compose up --build`
 Open in browser: http://localhost:8000
 You should see the Django welcome page 🎉
-```
+
 
 
 
