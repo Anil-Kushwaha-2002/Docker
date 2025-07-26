@@ -54,8 +54,9 @@ CMD ["python", "app.py"]
 - Runs everything together with one command.
 - ✅ Command: `docker-compose up -d`
 
-
-
+7 Registries
+8 Docker Contexts
+  
 ## 🚢 What is a Container ?
 - A container is like a mini virtual machine that holds:
 - Your application
