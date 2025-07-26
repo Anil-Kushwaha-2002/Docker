@@ -147,7 +147,7 @@ Open in browser: http://localhost:8000
 You should see the Django welcome page 🎉
 
 # 2. Project: Dockerize a Django App
-## ✅ Best for: Multi-file Projects like Django, with volumes, ports, and services.
+## ✅ Best for: Multi-file Projects like Django, with volumes, ports, and services. ( Or if allredy create app in vs code )
 We’ll set up:
 - A basic Django project
 - Dockerfile
