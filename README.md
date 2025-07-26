@@ -104,7 +104,7 @@ CMD ["python", "app.py"]
 
 
 # 🔧🐳 Build and run a Simple python and Django backend app in Docker. This is a real-world setup you’ll often use as a backend developer.
-## 1. Project: Dockerize a Simple python App
+# 1. Project: Dockerize a Simple python App
 We’ll set up:
 - A basic python project
 - Dockerfile
@@ -146,8 +146,8 @@ Skip if you already have a python project.
 Open in browser: http://localhost:8000
 You should see the Django welcome page 🎉
 
-# ✅ Best for: Multi-file Projects like Django, with volumes, ports, and services.
-## 2. Project: Dockerize a Django App
+# 2. Project: Dockerize a Django App
+## ✅ Best for: Multi-file Projects like Django, with volumes, ports, and services.
 We’ll set up:
 - A basic Django project
 - Dockerfile
@@ -155,7 +155,7 @@ We’ll set up:
 - requirements.txt
 
 # ✅ Step-by-Step Guide
-same 
+same as simple python app
 Automatically builds the Dockerfile and runs the app
 `docker compose up --build`
 
