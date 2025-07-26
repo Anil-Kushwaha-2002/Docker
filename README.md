@@ -110,24 +110,19 @@ We’ll set up:
 - docker-compose.yml (optional, for DB later)
 
 ## 📁 Folder Structure (after setup)
-my-django-app/
+my-python-app/
 ├── Dockerfile
 ├── requirements.txt
-├── manage.py
-├── myproject/
-│   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
+├── app.py
 
 
 # ✅ Step-by-Step Guide
-# 1. Create Django Project Locally (optional)
-Skip if you already have a Django project.
+# 1. Create Simple Project Locally (optional)
+Skip if you already have a python project.
 
-- `mkdir my-django-app && cd my-django-app`
+- `mkdir my-python-app && cd my-python-app`
 - python -m venv venv && source venv/bin/activate
-- pip install django
+- `pip install django`  # if django used
 - django-admin startproject myproject.
 - pip freeze > requirements.txt
 
@@ -137,16 +132,16 @@ Skip if you already have a Django project.
 - `WORKDIR /app`   # Set working directory
 - `COPY requirements.txt .`   # Copy requirements & install
 - `RUN pip install --no-cache-dir -r requirements.txt`
-- `COPY . .`    # Copy entire Django project
+- `COPY . .`    # Copy entire project
 - `EXPOSE 8000`    # Expose port 8000
-- `CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]`   # Run Django dev server
+- `CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]`   # Run python dev server
 
 
 # 3. Build the Docker Image
-`docker build -t django-app .`
+`docker build -t my-python-app .`
 
 # 4. Run the Django Container
-`docker run -d -p 8000:8000 django-app`
+`docker run -d -p 8000:8000 my-python-app`
 
 Open in browser: http://localhost:8000
 You should see the Django welcome page 🎉
