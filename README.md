@@ -128,15 +128,13 @@ Skip if you already have a python project.
 
 # 2. Create Dockerfile  
 ## `nano Dockerfile`  - #  Paste this code:-
-```
 - `FROM python:3.11`   # Use official Python base image
 - `WORKDIR /app`   # Set working directory
 - `COPY requirements.txt .`   # Copy requirements & install
 - `RUN pip install --no-cache-dir -r requirements.txt`
 - `COPY . .`    # Copy entire project
 - `EXPOSE 8000`    # Expose port 8000
-- `CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]`   # Run python dev server
-```
+- `CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]`   # Run python dev serve
 
 
 # 3. Build the Docker Image
