@@ -161,6 +161,10 @@ We’ll set up:
 Open in browser: http://localhost:8000
 You should see the Django welcome page 🎉
 
+# Stop and remove services, networks, and volumes
+`docker compose down`
+
+
 
 
 
