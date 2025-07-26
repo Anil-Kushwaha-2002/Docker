@@ -56,6 +56,7 @@ CMD ["python", "app.py"]
 
 7 Registries
 8 Docker Contexts
+9 docker-compose.yml
   
 ## 🚢 What is a Container ?
 - A container is like a mini virtual machine that holds:
@@ -102,12 +103,11 @@ CMD ["python", "app.py"]
 
 
 
-# 🔧🐳 Build and run a Django backend app in Docker. This is a real-world setup you’ll often use as a backend developer.
-✅ Project: Dockerize a Django App
+# 🔧🐳 Build and run a Simple python and Django backend app in Docker. This is a real-world setup you’ll often use as a backend developer.
+## 1. Project: Dockerize a Simple python App
 We’ll set up:
-- A basic Django project
+- A basic python project
 - Dockerfile
-- docker-compose.yml (optional, for DB later)
 
 ## 📁 Folder Structure (after setup)
 my-python-app/
@@ -145,6 +145,19 @@ Skip if you already have a python project.
 
 Open in browser: http://localhost:8000
 You should see the Django welcome page 🎉
+
+# ✅ Best for: Multi-file Projects like Django, with volumes, ports, and services.
+## 2. Project: Dockerize a Django App
+We’ll set up:
+- A basic Django project
+- Dockerfile
+- docker-compose.yml (optional, for DB later)
+- requirements.txt
+
+# ✅ Step-by-Step Guide
+same 
+Automatically builds the Dockerfile and runs the app
+`docker compose up --build`
 
 
 
