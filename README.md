@@ -117,7 +117,7 @@ my-python-app/
 
 
 # ✅ Step-by-Step Guide
-# 1. Create Simple Project Locally (optional)
+## 1. Create Simple Project Locally (optional)
 Skip if you already have a python project.
 
 - `mkdir my-python-app && cd my-python-app`
@@ -126,7 +126,7 @@ Skip if you already have a python project.
 - django-admin startproject myproject.
 - pip freeze > requirements.txt
 
-# 2. Create Dockerfile  
+## 2. Create Dockerfile  
 ## `nano Dockerfile`  - #  Paste this code:-
 - `FROM python:3.11`   # Use official Python base image
 - `WORKDIR /app`   # Set working directory
@@ -137,10 +137,10 @@ Skip if you already have a python project.
 - `CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]`   # Run python dev serve
 
 
-# 3. Build the Docker Image
+## 3. Build the Docker Image
 `docker build -t my-python-app .`    # ( -t  or --tag :- Tag/naming the Docker Image )
 
-# 4. Run the Django Container
+## 4. Run the Django Container
 - `docker run -d -p 8000:8000 my-python-app`    # ( -d 0r --detach :- Run container in background	Web servers, APIs, services)
 - `docker run -d -p 8000:8000 --name python-app-container my-python-app`   # --name: gives your container a readable, custom name (Python-app-container)
 
