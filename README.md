@@ -141,8 +141,8 @@ Skip if you already have a python project.
 `docker build -t my-python-app .`    # ( -t  or --tag :- Tag/naming the Docker Image )
 
 # 4. Run the Django Container
-`docker run -d -p 8000:8000 my-python-app`    # ( -d 0r --detach :- Run container in background	Web servers, APIs, services)
-`docker run -d -p 8000:8000 --name python-app-container my-python-app`   # --name: gives your container a readable, custom name (Python-app-container)
+- `docker run -d -p 8000:8000 my-python-app`    # ( -d 0r --detach :- Run container in background	Web servers, APIs, services)
+- `docker run -d -p 8000:8000 --name python-app-container my-python-app`   # --name: gives your container a readable, custom name (Python-app-container)
 
 Open in browser: http://localhost:8000
 You should see the Django welcome page 🎉
@@ -157,14 +157,14 @@ We’ll set up:
 
 # ✅ Step-by-Step Guide
 - same as simple python app
-# Automatically builds the Dockerfile and runs the app
+## Automatically builds the Dockerfile and runs the app
 `docker compose up --build`
 Open in browser: http://localhost:8000
 You should see the Django welcome page 🎉
 
-# Stop and remove services, networks, and volumes
+## Stop and remove services, networks, and volumes
 `docker compose down`
-# Won't see the logs/output directly in your terminal.
+## Won't see the logs/output directly in your terminal.
 `docker logs container-id-or-name`
 
 
