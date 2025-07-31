@@ -151,15 +151,15 @@ You should see the Django welcome page 🎉
 ## ✅ Best for: Multi-file Projects like Django, with volumes, ports, and services. ( Or if allredy create app in vs code )
 We’ll set up:
 - A basic Django project
-- Dockerfile
-- docker-compose.yml (optional, for DB later)
-- requirements.txt
+- `Dockerfile`
+- `docker-compose.yml` (optional, for DB later)
+- `requirements.txt`
 
 # ✅ Step-by-Step Guide
 - same as simple python app
 ## Automatically builds the Dockerfile and runs the app
 `docker compose up --build`
-Open in browser: http://localhost:8000
+- Open in browser: http://localhost:8000
 You should see the Django welcome page 🎉
 
 ## Stop and remove services, networks, and volumes
