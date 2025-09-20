@@ -176,8 +176,22 @@ You should see the Django welcome page 🎉
 - **Orchestration** = Automating deployment, management, scaling, and networking of applications.  
 - In DevOps, orchestration tools (like **Kubernetes**) help manage **containers** across multiple servers.  
 ---
+## 2.📌 What is Kind ?
+- **Kind** = Kubernetes IN Docker.  
+- Used for **local K8s clusters** (testing & learning).  
+- Lightweight & easy setup compared to Minikube.
+---
 
-##  2.🔹 What is Kubernetes (K8s) ?
+### Cluster Setup with Kind
+```bash
+kind create cluster                                  # Create a single-node cluster
+kind get clusters                                    # List all clusters
+kubectl get nodes                                    # Check nodes in the cluster
+kind create cluster --name=multi-node-cluster --config=kind-config.yaml     # Create a multi-node cluster using config file
+kind delete cluster --name=kind                                             # Delete a cluster by name
+```
+
+##  3.📌 What is Kubernetes (K8s) ?
 - **Kubernetes (K8s)** is an **open-source container orchestration platform**.  
 - Originally developed by Google, now maintained by CNCF.  
 - It automates:
@@ -185,12 +199,8 @@ You should see the Django welcome page 🎉
   - Scaling up/down apps  
   - Load balancing traffic  
   - Self-healing (restart failed containers)
----  
-##  3.🔹 Flow
-📝 YAML Manifest → 📦 Pod → 🗂️ ReplicaSet → 🏷️ Deployment → 🌐 Service → 🌍 Ingress → ☁️ Cluster
 ---
-
-##  4.📌 Core Concepts
+  ##  4.🔹 Core Concepts
 - **📦 Pod** → Smallest deployable unit (runs one or more containers).
 - **🗂️ ReplicaSet** → Ensures the desired number of Pods are running.
 - **🏷️ Deployment** → Manages ReplicaSets & updates (rolling updates, rollback).
@@ -203,9 +213,13 @@ You should see the Django welcome page 🎉
 - **🔑 Secret** → Store sensitive data (passwords, tokens).
 - **📦 Volume** → Persistent storage for Pods.
 - **🔧 kubelet** → Agent running on each node, ensures Pods run.
+
+---  
+##  5.🔹 Flow
+📝 YAML Manifest → 📦 Pod → 🗂️ ReplicaSet → 🏷️ Deployment → 🌐 Service → 🌍 Ingress → ☁️ Cluster
 ---
 
-##  5.📌 Example Workflow
+##  6.📌 Example Workflow
 - 📝 Write Deployment YAML (app + replicas).
 - 📦 Pods created automatically via ReplicaSet.
 - 🌐 Expose app with a Service.
@@ -213,7 +227,7 @@ You should see the Django welcome page 🎉
 - 📊 Monitor with Prometheus + Grafana.
 
 ---
-##  6.🔹 Key Kubernetes Components
+##  7.🔹 Key Kubernetes Components
 1. **Cluster** → Group of machines (nodes) running containers.  
 2. **Node** → A worker machine (VM or physical server).  
 3. **Pod** → Smallest unit in K8s, contains one or more containers.  
@@ -224,7 +238,7 @@ You should see the Django welcome page 🎉
 
 ---
 
-##  7.🔹 Why Kubernetes is Important in DevOps?
+##  8.🔹 Why Kubernetes is Important in DevOps?
 - Automates container lifecycle.
 - Provides scalability (scale apps up/down easily).
 - High availability with self-healing.
@@ -232,8 +246,11 @@ You should see the Django welcome page 🎉
 - Works seamlessly with Docker & cloud providers (AWS, Azure, GCP).
 ---
 
-##  8.🔹 Basic Kubernetes Commands
+##  9.🔹 Basic Kubernetes Commands
 ```bash
+sudo snap install kubectl --classic           # Install kubectl (Ubuntu)
+kubectl version --client                      # Verify installation
+
 kubectl cluster-info                                         # Check cluster info
 kubectl get nodes                                            # Get all node
 kubectl get pods                                             # Get all pods
@@ -241,6 +258,7 @@ kubectl create deployment myapp --image=nginx                # Deploy an app
 kubectl expose deployment myapp --port=80 --type=NodePort    # Expose deployment as a service
 kubectl scale deployment myapp --replicas=3                  # Scale deployment
 kubectl delete deployment myapp                              # Delete deployment
+
 ```
 
 
